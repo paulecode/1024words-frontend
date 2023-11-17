@@ -1,4 +1,9 @@
 .container {
     border-top: 0.5px solid #eee;
     border-left: 0.5px solid #eee;
+    overflow: scroll;
+
+    h1 {
+        margin: 1.5rem;
+    }
 }

@@ -1,4 +1,7 @@
+"use client";
+import { usePathname } from "next/navigation";
 import styles from "./NavItem.module.scss";
+import Link from "next/link";
 
 export const NavItem: React.FC<{
   label: string;
@@ -6,13 +9,20 @@ export const NavItem: React.FC<{
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
 }> = ({ label, target, leftIcon, rightIcon }) => {
+  const path = usePathname();
+  const active = path === target;
+
   return (
-    <a href={target} className={styles.link}>
-      <div className={styles.container}>
+    <Link href={target} className={styles.link} prefetch>
+      <div
+        className={
+          active ? `${styles.container} ${styles.active}` : styles.container
+        }
+      >
         {leftIcon && <div className={styles.leftIcon}>{leftIcon}</div>}
         <div className={styles.label}>{label}</div>
         {rightIcon && <div className={styles.rightIcon}>{rightIcon}</div>}
       </div>
-    </a>
+    </Link>
   );
 };
