@@ -1,0 +1,35 @@
+.link {
+    text-decoration: none;
+    .container {
+        color: #000;
+        border: 1px solid #eee;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        padding: 1rem 0 1rem 1rem;
+        transition: all 0.125s ease-in-out;
+        &:hover {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .leftIcon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .rightIcon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 1rem;
+        }
+
+        &.active {
+            background-color: black;
+            border-color: #000;
+            color: #fff;
+        }
+    }
+}

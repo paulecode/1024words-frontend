@@ -1,0 +1,12 @@
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 14fr;
+    grid-template-areas: "placeholder header" "sidebar content";
+    
+    .spaceholder {
+        border-bottom: 0.5px solid #eee;
+        border-right: 0.5px solid #eee;
+    }
+}
